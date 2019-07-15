@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+D:\tamto\.metadata\.plugins\org.eclipse.jdt.core
+1180587985.index
+2747223513.index
+2863708473.index
