@@ -302,6 +302,7 @@ public class HocTinhToan extends JFrame {
 						 + txtNumB.getText() + " * (" + Integer.toString(denB * denA / gcd) + " / " + txtDenB.getText() + ") = " 
 						 + Integer.toString((numA * (denBoth/denA) + (numB * (denBoth/denB))));
 				txtResult2 += "\n  -  Mẫu số  =  " + Integer.toString(denBoth); 
+				textArea.setText(txtResult + txtResult2);
 			}
 		});
 		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.LEFT);
@@ -371,6 +372,8 @@ public class HocTinhToan extends JFrame {
 				txtResult2 += txtNumA.getText() + " * " + txtNumB.getText() + " = " + Integer.toString(numA * numB);
 				txtResult2 += "\n  -  Mẫu số  =  " +  txtDenA.getText() + " * " + txtDenB.getText() + " = " + Integer.toString(denA * denB);
 				
+				textArea.setText(txtResult + txtResult2);
+				
 			}
 		});
 		rdbtnNewRadioButton_2.setActionCommand("3");
@@ -401,6 +404,8 @@ public class HocTinhToan extends JFrame {
 
 				txtResult2 += txtNumA.getText() + " * " + txtDenB.getText() + " = " + Integer.toString(numA * denB);
 				txtResult2 += "\n  -  Mẫu số  =  " + txtDenA.getText() + " * " + txtNumB.getText() + " = " + Integer.toString(denA * numB);
+				
+				textArea.setText(txtResult + txtResult2);
 			}
 		});
 		rdbtnNewRadioButton_3.setActionCommand("4");
