@@ -236,7 +236,7 @@ public class HocTinhToan extends JFrame {
 					.addGap(23)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 						.addComponent(lblHngDn, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE)
-						.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE))
+						.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
@@ -256,7 +256,10 @@ public class HocTinhToan extends JFrame {
 										.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 											.addComponent(panel_2, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
 											.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE))
-										.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE))
+										.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+										.addGroup(gl_contentPane.createSequentialGroup()
+											.addGap(32)
+											.addComponent(label_1)))
 									.addPreferredGap(ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 										.addComponent(btnPhnSMi)
@@ -265,9 +268,7 @@ public class HocTinhToan extends JFrame {
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addComponent(lblHngDn)
 									.addPreferredGap(ComponentPlacement.RELATED)
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-										.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 221, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label_1))))))
+									.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 221, GroupLayout.PREFERRED_SIZE)))))
 					.addContainerGap(23, Short.MAX_VALUE))
 		);
 		
