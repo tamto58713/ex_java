@@ -44,63 +44,62 @@ public class Fraction {
 
 		return a;
 	}
+
 	public Fraction minimalize(Fraction a) {
 		int gcm = GCD(a.getNumerator(), a.getDenomirator());
-		a.setNumerator(a.getNumerator()/gcm);
-		a.setDenomirator(a.getDenomirator()/gcm);
+		a.setNumerator(a.getNumerator() / gcm);
+		a.setDenomirator(a.getDenomirator() / gcm);
 		return a;
 	}
+
 	public Fraction addition(Fraction a, Fraction b) {
-		
+
 		a = a.minimalize(a);
 		b = b.minimalize(b);
-		
+
 		int gcd = GCD(a.getDenomirator(), b.getDenomirator());
 		int lcm = (a.getDenomirator() * b.getDenomirator()) / gcd;
 
 		a.setNumerator(a.getNumerator() * (lcm / a.getDenomirator()));
 		b.setNumerator(b.getNumerator() * (lcm / b.getDenomirator()));
-		
+
 		a.setDenomirator(lcm);
 		b.setDenomirator(lcm);
 
-
-		
 		int numerator = a.getNumerator() + b.getNumerator();
 		int denomirator = a.getDenomirator();
-		
+
 		Fraction c = new Fraction(numerator, denomirator);
 		c = c.minimalize(c);
 		return c;
 	}
-	
+
 	public Fraction subtraction(Fraction a, Fraction b) {
 		a = a.minimalize(a);
 		b = b.minimalize(b);
-		
+
 		int gcd = GCD(a.getDenomirator(), b.getDenomirator());
 		int lcm = (a.getDenomirator() * b.getDenomirator()) / gcd;
 
 		a.setNumerator(a.getNumerator() * (lcm / a.getDenomirator()));
 		b.setNumerator(b.getNumerator() * (lcm / b.getDenomirator()));
-		
+
 		a.setDenomirator(lcm);
 		b.setDenomirator(lcm);
 
-
 		int numerator = a.getNumerator() - b.getNumerator();
 		int denomirator = a.getDenomirator();
-		
+
 		Fraction c = new Fraction(numerator, denomirator);
 		c = c.minimalize(c);
 		return c;
 	}
-	
+
 	public Fraction multiple(Fraction a, Fraction b) {
-		
+
 		a = a.minimalize(a);
 		b = b.minimalize(b);
-		
+
 		int numerator = a.getNumerator() * b.getNumerator();
 		int denomirator = a.getDenomirator() * b.getDenomirator();
 
@@ -108,12 +107,12 @@ public class Fraction {
 		c = c.minimalize(c);
 		return c;
 	}
-	
+
 	public Fraction divition(Fraction a, Fraction b) {
-		
+
 		a = a.minimalize(a);
 		b = b.minimalize(b);
-		
+
 		int numerator = a.getNumerator() * b.getDenomirator();
 		int denomirator = a.getDenomirator() * b.getNumerator();
 
@@ -122,4 +121,35 @@ public class Fraction {
 		return c;
 	}
 
+	public void show() {
+		System.out.println(this.getNumerator() + "\n" + this.getDenomirator());
+	}
+
+	public String commpareFractions(Fraction a, Fraction b) {
+
+		a = a.minimalize(a);
+		b = b.minimalize(b);
+
+		int gcd = GCD(a.getDenomirator(), b.getDenomirator());
+		int lcm = (a.getDenomirator() * b.getDenomirator()) / gcd;
+
+		a.setNumerator(a.getNumerator() * (lcm / a.getDenomirator()));
+		b.setNumerator(b.getNumerator() * (lcm / b.getDenomirator()));
+
+		a.setDenomirator(lcm);
+		b.setDenomirator(lcm);
+		
+		int numA = a.getNumerator();
+		int numB = b.getNumerator();
+		
+		
+		if (numA > numB)
+			return ">";
+		else if (numA < numB)
+			return "<";
+		else
+			return "=";
+	
+		
+	}
 }

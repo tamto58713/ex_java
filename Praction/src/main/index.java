@@ -10,6 +10,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Toolkit;
 
 public class index {
 
@@ -35,6 +36,7 @@ public class index {
 	 * Create the application.
 	 */
 	public index() {
+		
 		initialize();
 	}
 
@@ -43,6 +45,7 @@ public class index {
 	 */
 	private void initialize() {
 		frmChngTrnhH = new JFrame();
+		frmChngTrnhH.setIconImage(Toolkit.getDefaultToolkit().getImage(index.class.getResource("/images/icons8_discount_60px_1.png")));
 		frmChngTrnhH.setTitle("Ch\u01B0\u01A1ng tr\u00ECnh h\u1ED7 tr\u1EE3 h\u1ECDc ph\u00E2n s\u1ED1");
 		frmChngTrnhH.setBounds(50, 50, 677, 420);
 		frmChngTrnhH.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
